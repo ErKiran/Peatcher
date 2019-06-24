@@ -5,7 +5,6 @@ import Controls from './Controls';
 class Banner extends Component {
     render() {
         return (
-            <header id="home">
                 <div className="banner-area content-top-heading less-paragraph text-normal">
                     <div id="bootcarousel" className="carousel slide animate_text carousel-fade" data-ride="carousel">
                         <div>
@@ -14,7 +13,6 @@ class Banner extends Component {
                         </div>
                     </div>
                 </div>
-            </header>
         );
     }
 }
