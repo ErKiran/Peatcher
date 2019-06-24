@@ -5,8 +5,8 @@ import SearchArea from './SearchArea';
 //import FeatureProductIntro from './FeatureProductIntro';
 import FeatureProduct from './FeatureProduct';
 import SailingArea from './SailingArea';
-import NewsLetterArea from './NewsLetterArea';
-import FooterDescArea from './FooterDescArea';
+import NewsLetterArea from '../Layout/NewsLetterArea';
+import FooterDescArea from '../Layout/FooterDescArea';
 import Footer from '../Layout/Footer';
 
 class Homepage extends Component {
