@@ -13,9 +13,17 @@ class Blog extends Component {
             <div>
                 <Header />
                 <Breadcrumb h1="Blog" li1="Home" li2="About us" li3="Blog" />
-                <SigleItems />
-                <Pagination />
-                <Sidebar />
+                <div className="blog-area full-blog left-sidebar full-blog default-padding">
+                    <div className="container">
+                        <div className="row">
+                            <div className="blog-items">
+                                <SigleItems />
+                                <Sidebar />
+                                <Pagination />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </div>
         );
