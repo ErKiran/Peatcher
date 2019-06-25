@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Controls extends Component {
     render() {
         return (
-            <div>
+            <>
                 <a className="left carousel-control" href="#bootcarousel" data-slide="prev">
                     <i className="fa fa-angle-left"></i>
                     <span className="sr-only">Previous</span>
@@ -13,7 +13,7 @@ class Controls extends Component {
                     <span className="sr-only">Next</span>
                 </a>
 
-            </div>
+            </>
         );
     }
 }

@@ -6,8 +6,10 @@ class Footer extends Component {
     render() {
         return (
             <>
-            <FooterMain />
-            <FooterButton />
+                <footer class="bg-dark default-padding-top text-light">
+                    <FooterMain />
+                    <FooterButton />
+                </footer>
             </>
         );
     }

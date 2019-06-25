@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class FooterButton extends Component {
     render() {
@@ -8,7 +9,7 @@ class FooterButton extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="col-md-6">
-                                <p>&copy; Copyright 2019. All Rights Reserved by <a href="#">PEATCHER</a></p>
+                                <p>&copy; Copyright 2019. All Rights Reserved by <Link to="/">PEATCHER</Link></p>
                             </div>
                             <div className="col-md-6 text-right link">
                                 <ul>

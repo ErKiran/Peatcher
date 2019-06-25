@@ -12,9 +12,9 @@ class Contact extends Component {
             <div>
                 <Header />
                 <Breadcrumb h1="Contact Us" li1="Home" li2="About us" li3="Get in Touch With us" />
-                <div class="contact-info-area default-padding">
-                    <div class="container">
-                        <div class="row">
+                <div className="contact-info-area default-padding">
+                    <div className="container">
+                        <div className="row">
                             <ContactInfo />
                             <Seperator />
                             <MapAndContact />

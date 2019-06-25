@@ -12,6 +12,7 @@ import Register from './components/Register/Register';
 import WhyUs from './components/WhyUS/Whyus';
 import Wedo from './components/WhatWeDo/Wedo';
 import Trust from './components/Trust/Trust';
+import Privacy from './components/Privacy/Privacy';
 
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
         <Route path="/Why_Us" component={WhyUs} />
         <Route path="/What_we_do" component={Wedo} />
         <Route path="/trust_safety" component={Trust} />
+        <Route path="/privacy_policy" component={Privacy} />
       </BrowserRouter>
     );
   }

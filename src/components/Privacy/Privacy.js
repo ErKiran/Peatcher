@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import Header from '../Layouts/Header/Header';
 import Footer from '../Layouts/Footer/Footer';
-import Dummy from './Features/Dummy';
-import Pcourse from './PopularCourse/Pcourse';
+import Breadcrumbs from '../Layouts/Breadcrumb';
+import CourseDetails from './CourseDetails';
 
-class Wedo extends Component {
+class Privacy extends Component {
     render() {
         return (
             <div>
                 <Header />
-                <Dummy />
-                <Pcourse />
+                <Breadcrumbs />
+                <CourseDetails />
                 <Footer />
+
             </div>
         );
     }
 }
 
-export default Wedo;
+export default Privacy;
