@@ -9,6 +9,8 @@ import Faq from './components/FAQ/Faq';
 import How from './components/HowitWorks/How';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import WhyUs from './components/WhyUS/Whyus';
+import Wedo from './components/WhatWeDo/Wedo';
 
 
 class App extends Component {
@@ -24,6 +26,8 @@ class App extends Component {
         <Route path="/How" component={How} />
         <Route path="/Login" component={Login} />
         <Route path="/Register" component={Register} />
+        <Route path="/Why_Us" component={WhyUs} />
+        <Route path="/What_we_do" component={Wedo} />
       </BrowserRouter>
     );
   }
