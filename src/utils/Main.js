@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { registerUser } from '../../actions/authAction';
+import { loginUser } from '../../actions/authAction';
 import RegisterSocial from './RegisterSocial';
 
 
@@ -23,12 +22,13 @@ class Main extends Component {
 
         const userData = {
             email: this.state.email,
-            password: this.state.password,
-            name: this.state.username
+            password: this.state.password
         };
 
-        this.props.registerUser(userData);
-        console.log(userData)
+        this.props.loginUser(userData);
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/What_we_do')
+        }
     }
 
     onChange = (e) => {
@@ -125,7 +125,6 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, { registerUser })(withRouter(Main));
-
+export default connect(mapStateToProps, { loginUser })(Main);
 
 
