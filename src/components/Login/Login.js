@@ -5,10 +5,11 @@ import Main from './Main';
 
 class Login extends Component {
     render() {
+        console.log(this.props)
         return (
             <div>
                 <Header />
-                <Main />
+                <Main history={this.props.history} />
                 <Footer />
             </div>
         );

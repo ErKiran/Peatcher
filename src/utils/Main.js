@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { registerUser } from '../../actions/authAction';
-import RegisterSocial from '../Layouts/RegisterSocial';
+import { loginUser } from '../../actions/authAction';
+import RegisterSocial from './RegisterSocial';
 
 
 class Main extends Component {
@@ -23,13 +22,12 @@ class Main extends Component {
 
         const userData = {
             email: this.state.email,
-            password: this.state.password,
-            name: this.state.username
+            password: this.state.password
         };
-        const values = this.props.registerUser(userData);
-        //console.log(values.hasOwnProperty('_id'))
-        if (values.hasOwnProperty('_id')) {
-            this.props.history.push('/login')
+
+        this.props.loginUser(userData);
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/What_we_do')
         }
     }
 
@@ -81,7 +79,7 @@ class Main extends Component {
                                                 <input
                                                     className="form-control"
                                                     placeholder="Password*"
-                                                    type="text"
+                                                    type="password"
                                                     name="password"
                                                     value={this.state.password}
                                                     onChange={this.onChange}
@@ -95,7 +93,7 @@ class Main extends Component {
                                                 <input
                                                     className="form-control"
                                                     placeholder="Repeat Password*"
-                                                    type="text"
+                                                    type="password"
                                                     name="password2"
                                                     value={this.state.password2}
                                                     onChange={this.onChange}
@@ -110,13 +108,14 @@ class Main extends Component {
                                         </button>
                                         </div>
                                     </div>
-                                    <p className="link-bottom">Are you a member? <Link to="/login">Login now</Link></p>
+                                    <p className="link-bottom">Are you a member? <a href="#">Login now</a></p>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+
         );
     }
 }
@@ -126,7 +125,6 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, { registerUser })(withRouter(Main));
-
+export default connect(mapStateToProps, { loginUser })(Main);
 
 

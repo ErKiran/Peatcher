@@ -1,15 +1,41 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { contactMessage } from '../../actions/contact';
+
+
+import Map from './Map';
+
 
 class MapAndContact extends Component {
+    constructor() {
+        super();
+        this.state = {
+            email: '',
+            name: '',
+            phone: '',
+            message: ''
+        };
+    }
+    onSubmit = (e) => {
+        e.preventDefault();
+
+        const userData = {
+            email: this.state.email,
+            name: this.state.name,
+            phone: this.state.phone,
+            message: this.state.message
+        };
+
+        this.props.contactMessage(userData);
+    }
+
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
     render() {
         return (
             <div className="maps-form">
-                <div className="col-md-6 maps">
-                    <h3>Our Location</h3>
-                    <div className="google-maps">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14767.262289338461!2d70.79414485000001!3d22.284975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1424308883981"></iframe>
-                    </div>
-                </div>
+                <Map />
                 <div className="col-md-6 form">
                     <div className="heading">
                         <h3>Contact Us</h3>
@@ -17,11 +43,19 @@ class MapAndContact extends Component {
                             Occasional terminated insensible and inhabiting gay. So know do fond to half on. Now who promise was justice new winding
                     </p>
                     </div>
-                    <form action="http://validthemes.com/themeforest/examin/assets/mail/contact.php" method="POST" className="contact-form">
+                    <form onSubmit={this.onSubmit} className="contact-form">
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="form-group">
-                                    <input className="form-control" id="name" name="name" placeholder="Name" type="text" />
+                                    <input
+                                        className="form-control"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Name"
+                                        type="text"
+                                        value={this.state.name}
+                                        onChange={this.onChange}
+                                    />
                                     <span className="alert-error"></span>
                                 </div>
                             </div>
@@ -29,7 +63,15 @@ class MapAndContact extends Component {
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="form-group">
-                                    <input className="form-control" id="email" name="email" placeholder="Email*" type="email" />
+                                    <input
+                                        className="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Email*"
+                                        type="email"
+                                        value={this.state.email}
+                                        onChange={this.onChange}
+                                    />
                                     <span className="alert-error"></span>
                                 </div>
                             </div>
@@ -37,7 +79,15 @@ class MapAndContact extends Component {
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="form-group">
-                                    <input className="form-control" id="phone" name="phone" placeholder="Phone" type="text" />
+                                    <input
+                                        className="form-control"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="Phone"
+                                        type="text"
+                                        value={this.state.phone}
+                                        onChange={this.onChange}
+                                    />
                                     <span className="alert-error"></span>
                                 </div>
                             </div>
@@ -45,7 +95,14 @@ class MapAndContact extends Component {
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="form-group comments">
-                                    <textarea className="form-control" id="comments" name="comments" placeholder="Tell Me About Courses *"></textarea>
+                                    <textarea
+                                        className="form-control"
+                                        id="comments"
+                                        name="message"
+                                        placeholder="Tell Me About Courses *"
+                                        value={this.state.message}
+                                        onChange={this.onChange}
+                                    ></textarea>
                                 </div>
                             </div>
                         </div>
@@ -67,4 +124,10 @@ class MapAndContact extends Component {
     }
 }
 
-export default MapAndContact;
+
+const mapStateToProps = state => ({
+    contact: state.contact,
+    errors: state.errors
+});
+
+export default connect(mapStateToProps, { contactMessage })(MapAndContact);
