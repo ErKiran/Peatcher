@@ -44,7 +44,11 @@ class App extends Component {
           <Route path="/Event" component={Event} />
           <Route path="/Faq" component={Faq} />
           <Route path="/How" component={How} />
+<<<<<<< HEAD
           <Route exact path="/Login" component={Login} />
+=======
+          <Route path="/Login" component={Login} />
+>>>>>>> 3fceaf55aa0d13a822c447b73d674b603758dd31
           <Route path="/Register" component={Register} />
           <Route path="/Why_Us" component={WhyUs} />
           <Route path="/What_we_do" component={Wedo} />

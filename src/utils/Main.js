@@ -79,7 +79,11 @@ class Main extends Component {
                                                 <input
                                                     className="form-control"
                                                     placeholder="Password*"
+<<<<<<< HEAD
                                                     type="password"
+=======
+                                                    type="text"
+>>>>>>> 3fceaf55aa0d13a822c447b73d674b603758dd31
                                                     name="password"
                                                     value={this.state.password}
                                                     onChange={this.onChange}
@@ -93,7 +97,11 @@ class Main extends Component {
                                                 <input
                                                     className="form-control"
                                                     placeholder="Repeat Password*"
+<<<<<<< HEAD
                                                     type="password"
+=======
+                                                    type="text"
+>>>>>>> 3fceaf55aa0d13a822c447b73d674b603758dd31
                                                     name="password2"
                                                     value={this.state.password2}
                                                     onChange={this.onChange}
