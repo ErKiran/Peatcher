@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Breadcrumb extends Component {
     render() {
         return (
-            <div className="breadcrumb-area shadow dark text-center bg-fixed text-light" style={{ backgroundImage: 'url(assets/img/banner/21.jpg)' }}>
+            <div className="breadcrumb-area shadow dark text-center bg-fixed text-light" style={{ backgroundImage: this.props.background }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">

@@ -46,7 +46,7 @@ class Pcourse extends Component {
                                         <p>
                                             Would day nor ask walls known. But preserved advantage are but and certainty
                                             earnestly enjoyment.
-                                </p>
+                                         </p>
                                         <div className="bottom-info">
                                             <ul>
                                                 <li>

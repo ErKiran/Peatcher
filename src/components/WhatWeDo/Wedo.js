@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Layouts/Header/Header';
 import Footer from '../Layouts/Footer/Footer';
 import Dummy from './Features/Dummy';
-import Pcourse from './PopularCourse/Pcourse';
+import Popularcourse from './PopularCourse/Popularcourse';
 
 class Wedo extends Component {
     render() {
@@ -10,7 +10,7 @@ class Wedo extends Component {
             <div>
                 <Header />
                 <Dummy />
-                <Pcourse />
+                <Popularcourse />
                 <Footer />
             </div>
         );

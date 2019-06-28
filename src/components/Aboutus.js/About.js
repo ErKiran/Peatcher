@@ -11,7 +11,7 @@ class About extends Component {
         return (
             <div>
                 <Header />
-                <Breadcrumb h1="About Us" li1="Home" li2="About us" li3="Who are we" />
+                <Breadcrumb h1="About Us" li1="Home" li2="About us" li3="Who are we" background="url(assets/img/banner/21.jpg)" />
                 <Main />
                 <VideoArea />
                 <Footer />

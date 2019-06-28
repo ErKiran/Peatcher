@@ -11,7 +11,7 @@ class Contact extends Component {
         return (
             <div>
                 <Header />
-                <Breadcrumb h1="Contact Us" li1="Home" li2="About us" li3="Get in Touch With us" />
+                <Breadcrumb h1="Contact Us" li1="Home" li2="About us" li3="Get in Touch With us" background="url(assets/img/banner/8.jpg)" />
                 <div className="contact-info-area default-padding">
                     <div className="container">
                         <div className="row">

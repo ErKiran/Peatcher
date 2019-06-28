@@ -3,11 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { registerUser } from '../../actions/authAction';
-<<<<<<< HEAD
 import RegisterSocial from '../Layouts/RegisterSocial';
-=======
-import RegisterSocial from './RegisterSocial';
->>>>>>> 3fceaf55aa0d13a822c447b73d674b603758dd31
 
 
 class Main extends Component {
@@ -30,17 +26,11 @@ class Main extends Component {
             password: this.state.password,
             name: this.state.username
         };
-<<<<<<< HEAD
         const values = this.props.registerUser(userData);
         //console.log(values.hasOwnProperty('_id'))
         if (values.hasOwnProperty('_id')) {
             this.props.history.push('/login')
         }
-=======
-
-        this.props.registerUser(userData);
-        console.log(userData)
->>>>>>> 3fceaf55aa0d13a822c447b73d674b603758dd31
     }
 
     onChange = (e) => {

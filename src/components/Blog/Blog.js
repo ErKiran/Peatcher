@@ -12,7 +12,13 @@ class Blog extends Component {
         return (
             <div>
                 <Header />
-                <Breadcrumb h1="Blog" li1="Home" li2="About us" li3="Blog" />
+                <Breadcrumb
+                    h1="Blog"
+                    li1="Home"
+                    li2="About us"
+                    li3="Blog"
+                    background="url(assets/img/banner/12.jpg)"
+                />
                 <div className="blog-area full-blog left-sidebar full-blog default-padding">
                     <div className="container">
                         <div className="row">

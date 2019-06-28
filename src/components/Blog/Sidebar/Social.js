@@ -14,21 +14,25 @@ class Social extends Component {
                                 <i className="fab fa-facebook-f"></i>
                             </a>
                         </li>
+                        {' '}
                         <li className="twitter">
                             <a href="#">
                                 <i className="fab fa-twitter"></i>
                             </a>
                         </li>
+                        {' '}
                         <li className="pinterest">
                             <a href="#">
                                 <i className="fab fa-pinterest"></i>
                             </a>
                         </li>
+                        {' '}
                         <li className="g-plus">
                             <a href="#">
                                 <i className="fab fa-google-plus-g"></i>
                             </a>
                         </li>
+                        {' '}
                         <li className="linkedin">
                             <a href="#">
                                 <i className="fab fa-linkedin-in"></i>
