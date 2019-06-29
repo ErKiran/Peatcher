@@ -1,0 +1,42 @@
+[
+    {
+        "background_image": "url(assets/img/category/1.jpg)",
+        "icon": "flaticon-feature",
+        "title": "software engineering"
+    },
+    {
+        "background_image": "url(assets/img/category/2.jpg)",
+        "icon": "flaticon-interaction",
+        "title": "Interactive Programming"
+    },
+    {
+        "background_image": "url(assets/img/category/3.jpg)",
+        "icon": "flaticon-conveyor",
+        "title": "Quantum Mechanics"
+    },
+    {
+        "background_image": "url(assets/img/category/4.jpg)",
+        "icon": "flaticon-education",
+        "title": "Preventing Dementia"
+    },
+    {
+        "background_image": "url(assets/img/category/5.jpg)",
+        "icon": "flaticon-potential",
+        "title": "Hidden Potential"
+    },
+    {
+        "background_image": "url(assets/img/category/6.jpg)",
+        "icon": "flaticon-print",
+        "title": "Introduction Programming"
+    },
+    {
+        "background_image": "url(assets/img/category/7.jpg)",
+        "icon": "flaticon-translate",
+        "title": "Language Club"
+    },
+    {
+        "background_image": "url(assets/img/category/8.jpg)",
+        "icon": "flaticon-firewall",
+        "title": "Maintaining a Mindful"
+    }
+]
