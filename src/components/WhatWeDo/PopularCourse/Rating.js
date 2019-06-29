@@ -27,7 +27,7 @@ class Rating extends Component {
             <div className="rating">
                 {full_stars}
                 {half_stars}
-                <span>{this.props.rating} {' '}{this.props.vote}</span>
+                <span>{this.props.rating} {' '}({this.props.vote})</span>
             </div>
         );
 

@@ -11,7 +11,7 @@ class CourseRating extends Component {
                     <Thumb image={this.props.author_image} />
                     <div className="others">
                         <a href="#">{this.props.author_name}</a>
-                        <Rating rating="4.2" />
+                        <Rating rating={this.props.rating} vote={this.props.vote} />
                     </div>
                 </div>
                 <h4><a href="#">{this.props.course_title}</a></h4>

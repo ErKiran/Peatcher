@@ -22,5 +22,53 @@
         "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
         "user": "300",
         "clock": "16:00"
+    },
+    {
+        "price": "Free",
+        "course_image": "assets/img/courses/3.jpg",
+        "author_image": "assets/img/team/3.jpg",
+        "author_name": "Jonathom Kiyam",
+        "rating": "4.9",
+        "votes": "2,655",
+        "course_title": "Covers Big Data analysis",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
+    },
+    {
+        "price": "$46",
+        "course_image": "assets/img/courses/4.jpg",
+        "author_image": "assets/img/team/4.jpg",
+        "author_name": "Huma Park",
+        "rating": "4.4",
+        "votes": "16,465",
+        "course_title": "professional web development",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
+    },
+    {
+        "price": "$124",
+        "course_image": "assets/img/courses/7.jpg",
+        "author_image": "assets/img/team/7.jpg",
+        "author_name": "Prokash Timer",
+        "rating": "5",
+        "votes": "7890",
+        "course_title": "Java Programming Masterclass",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
+    },
+    {
+        "price": "Free",
+        "course_image": "assets/img/courses/6.jpg",
+        "author_image": "assets/img/team/8.jpg",
+        "author_name": "Drunal Trula",
+        "rating": "4.6",
+        "votes": "659",
+        "course_title": "causal creative learning",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
     }
 ]
