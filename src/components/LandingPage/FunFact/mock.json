@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "flaticon-contract",
+        "to": "212",
+        "speed": "2000",
+        "title": "Awards Achieve"
+    },
+    {
+        "icon": "flaticon-professor",
+        "to": "1000",
+        "speed": "2000",
+        "title": "Satisfied Parents"
+    },
+    {
+        "icon": "flaticon-online",
+        "to": "8970",
+        "speed": "2000",
+        "title": "Student Enrolled"
+    },
+    {
+        "icon": "flaticon-reading",
+        "to": "640",
+        "speed": "2000",
+        "title": "Courses"
+    }
+]

@@ -4,7 +4,7 @@ class Option extends Component {
     render() {
         return (
             <div className="col-md-6 col-sm-6 equal-height">
-                <div className="item malachite" style={{ backgroundImage: this.props.background_image }}>
+                <div className={this.props.className} style={{ backgroundImage: this.props.background_image }}>
                     <a href="#">
                         <i className={this.props.icon} />
                         <div className="info">

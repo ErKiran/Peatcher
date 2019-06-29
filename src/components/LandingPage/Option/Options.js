@@ -15,6 +15,7 @@ class Options extends Component {
                                     title="Be A Teacher!"
                                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus"
                                     button_text="Get Started"
+                                    className="item malachite"
                                 />
                                 <Option
                                     background_image="url(assets/img/category/1.jpg)"
@@ -22,6 +23,7 @@ class Options extends Component {
                                     title="Be A Student!"
                                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus"
                                     button_text="Get Started"
+                                    className="item mariner"
                                 />
                             </div>
                         </div>

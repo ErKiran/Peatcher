@@ -3,8 +3,11 @@ import Header from '../Layouts/Header/Header';
 import Footer from '../Layouts/Footer/Footer';
 import Banner from './Banner/Banner';
 import About from './About';
-import Options from './Options';
+import Options from './Option/Options';
 import TopCategories from './TopCategories/TopCategories';
+import FunFact from './FunFact/FunFact';
+import Testimonials from './Testimonials/Testimonials';
+import Blog from './Blog/Blog';
 
 class Landingpages extends Component {
     render() {
@@ -15,6 +18,9 @@ class Landingpages extends Component {
                 <About />
                 <Options />
                 <TopCategories />
+                <FunFact />
+                <Testimonials />
+                <Blog />
                 <Footer />
             </>
         );

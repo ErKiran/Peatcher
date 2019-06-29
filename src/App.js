@@ -7,7 +7,7 @@ import store from './store';
 import { setCurrentUser, logoutUser } from './actions/authAction';
 
 
-import Landingpage from './components/LandingPageScratch/Landingpages';
+import Landingpages from './components/LandingPage/Landingpages';
 import About from './components/Aboutus.js/About';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
@@ -37,7 +37,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Landingpage} />
+          <Route exact path="/" component={Landingpages} />
           <Route path="/About" component={About} />
           <Route path="/Blog" component={Blog} />
           <Route path="/Contact" component={Contact} />
