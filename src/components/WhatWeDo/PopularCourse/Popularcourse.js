@@ -9,8 +9,12 @@ class Popularcourse extends Component {
                 <div className="container">
                     <HeadingC />
                     <PopularCourseItem />
+                    <div className="col-md-12 button text-center">
+                        <a className="btn btn-dark effect circle btn-md" href="#">Browse All Courses</a>
+                    </div>
                 </div>
             </div>
+
         );
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
-import SearchBar from './SearchBar';
+import SearchCourse from './SearchCourse';
 
 class Items extends Component {
     render() {
@@ -8,7 +8,7 @@ class Items extends Component {
             <div className="our-featues-area about-area default-padding bg-dark">
                 <div className="container">
                     <div className="row">
-                        <SearchBar />
+                        <SearchCourse />
                         <div className="our-features">
                             <Item
                                 itemclass="item mariner"
