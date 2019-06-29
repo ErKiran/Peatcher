@@ -7,7 +7,7 @@ import store from './store';
 import { setCurrentUser, logoutUser } from './actions/authAction';
 
 
-import Landingpage from './components/Landingpage/Landingpage';
+import Landingpage from './components/LandingPageScratch/Landingpages';
 import About from './components/Aboutus.js/About';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
