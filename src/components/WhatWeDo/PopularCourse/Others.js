@@ -8,7 +8,7 @@ class CourseRating extends Component {
         return (
             <div className="info">
                 <div className="author-info">
-                    <Thumb />
+                    <Thumb image={this.props.author_image} />
                     <div className="others">
                         <a href="#">{this.props.author_name}</a>
                         <Rating rating="4.2" />
@@ -18,7 +18,7 @@ class CourseRating extends Component {
                 <p>
                     {this.props.course_desc}
                 </p>
-                <Buttoninfo user="" clock="" />
+                <Buttoninfo user={this.props.user} clock={this.props.clock} />
             </div>
         );
     }

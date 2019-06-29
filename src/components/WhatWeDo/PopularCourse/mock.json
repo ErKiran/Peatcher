@@ -1,0 +1,26 @@
+[
+    {
+        "price": "Free",
+        "course_image": "assets/img/courses/5.jpg",
+        "author_image": "assets/img/team/1.jpg",
+        "author_name": "Munil Druva",
+        "rating": "4.5",
+        "votes": "23,890",
+        "course_title": "data science and software",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
+    },
+    {
+        "price": "$12",
+        "course_image": "assets/img/courses/2.jpg",
+        "author_image": "assets/img/team/2.jpg",
+        "author_name": "Akua Paul",
+        "rating": "5",
+        "votes": "867",
+        "course_title": "Stanford Engineering",
+        "course_desc": " Would day nor ask walls known. But preserved advantage are but and certainty earnestly enjoyment.",
+        "user": "300",
+        "clock": "16:00"
+    }
+]
