@@ -15,7 +15,7 @@ class Thumb extends Component {
         else {
             return (
                 <div className="thumb">
-                    <a href="#"><img src="assets/img/team/1.jpg" alt="Thumb" /></a>
+                    <a href="#"><img src={this.props.image} alt="Thumb" /></a>
                 </div>
             )
         }

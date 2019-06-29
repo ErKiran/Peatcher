@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Buttoninfo from './Buttoninfo';
 import Thumb from './Thumb';
+import Rating from './Rating';
 
 class CourseRating extends Component {
     render() {
@@ -9,23 +10,15 @@ class CourseRating extends Component {
                 <div className="author-info">
                     <Thumb />
                     <div className="others">
-                        <a href="#">Munil Druva</a>
-                        <div className="rating">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star-half-alt"></i>
-                            <span>{this.props.rating}</span>
-                        </div>
+                        <a href="#">{this.props.author_name}</a>
+                        <Rating rating="4.2" />
                     </div>
                 </div>
-                <h4><a href="#">data science and software</a></h4>
+                <h4><a href="#">{this.props.course_title}</a></h4>
                 <p>
-                    Would day nor ask walls known. But preserved advantage are but and certainty
-                    earnestly enjoyment.
-             </p>
-                <Buttoninfo />
+                    {this.props.course_desc}
+                </p>
+                <Buttoninfo user="" clock="" />
             </div>
         );
     }
