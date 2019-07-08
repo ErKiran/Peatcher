@@ -6,12 +6,12 @@ import { SET_CURRENT_USER } from './types';
 
 // Register User
 export const registerUser = (userData, history) => async dispatch => {
-    const res = await axios.post('http://localhost:3000/register', userData);
+    await axios.post('https://calm-eyrie-44469.herokuapp.com/register', userData);
 };
 
 export const loginUser = userData => async dispatch => {
     try {
-        const res = await axios.post('http://localhost:3000/login', userData);
+        const res = await axios.post('https://calm-eyrie-44469.herokuapp.com/login', userData);
         const { token } = res.data;
         console.log(token)
         localStorage.setItem('jwtToken', token);
