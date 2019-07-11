@@ -9,7 +9,7 @@ class NavInfo extends Component {
                         <Link to="/" className="active" >Home</Link>
                     </li>
                     <li className="dropdown">
-                        <a href="about-us.html" className="dropdown-toggle active" data-toggle="dropdown" >About Us</a>
+                        <Link to="/about" className="dropdown-toggle active" data-toggle="dropdown" >About Us</Link>
                         <ul className="dropdown-menu">
                             <li><Link to="/About">Who are We?</Link></li>
                             <li><Link to="/Contact">Get in Touch With Us</Link></li>
@@ -17,7 +17,7 @@ class NavInfo extends Component {
                         </ul>
                     </li>
                     <li className="dropdown">
-                        <Link to="/About" className="dropdown-toggle active" data-toggle="dropdown" >Our Concept</Link>
+                        <Link to="/What_we_do" className="dropdown-toggle active" data-toggle="dropdown" >Our Concept</Link>
                         <ul className="dropdown-menu">
                             <li><Link to="/What_we_do">What do we do?</Link></li>
                             <li><Link to="/Why_us">Why Us</Link></li>
@@ -26,7 +26,7 @@ class NavInfo extends Component {
                     </li>
 
                     <li className="dropdown">
-                        <Link to="/About" className="dropdown-toggle active" data-toggle="dropdown" >Security</Link>
+                        <Link to="/trust_safety" className="dropdown-toggle active" data-toggle="dropdown" >Security</Link>
                         <ul className="dropdown-menu">
                             <li><Link to="/trust_safety">Trust & Safety</Link></li>
                             <li><Link to="/privacy_policy">Privacy Policy</Link></li>
@@ -36,7 +36,7 @@ class NavInfo extends Component {
                     </li>
 
                     <li className="dropdown">
-                        <Link to="/About" className="dropdown-toggle active" data-toggle="dropdown" >Partnet with us</Link>
+                        <Link to="/event" className="dropdown-toggle active" data-toggle="dropdown" >Partnet with us</Link>
                         <ul className="dropdown-menu">
                             <li><a href="#">Affiliation</a></li>
                             <li><a href="#">Advertising</a></li>

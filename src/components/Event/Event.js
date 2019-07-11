@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Header from '../Layouts/Header/Header';
 import Breadcrumb from '../Layouts/Breadcrumb';
-import Footer from '../Layouts/Footer/Footer';
 import SingleItems from './SingleItems';
 
 class Event extends Component {
     render() {
         return (
             <div>
-                <Header />
-                <Breadcrumb h1="Event" li1="Home" li2="Partner With Us" li3="Event" />
+                <Breadcrumb h1="Event" li1="Home" li2="Partner With Us" li3="Event" background="url(assets/img/banner/4.jpg)" />
                 <section id="event" class="event-area default-padding">
                     <div class="container">
                         <div class="row">
@@ -19,7 +16,6 @@ class Event extends Component {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </div>
         );
     }

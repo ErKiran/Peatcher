@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
@@ -20,6 +20,7 @@ import WhyUs from './components/WhyUS/Whyus';
 import Wedo from './components/WhatWeDo/Wedo';
 import Trust from './components/Trust/Trust';
 import Privacy from './components/Privacy/Privacy';
+import Wrapper from './components/Layouts/Wrapper';
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
@@ -28,7 +29,7 @@ if (localStorage.jwtToken) {
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
-    window.location.href = '/signin';
+    window.location.href = '/';
   }
 }
 
@@ -37,19 +38,21 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Landingpages} />
-          <Route path="/About" component={About} />
-          <Route path="/Blog" component={Blog} />
-          <Route path="/Contact" component={Contact} />
-          <Route path="/Event" component={Event} />
-          <Route path="/Faq" component={Faq} />
-          <Route path="/How" component={How} />
-          <Route exact path="/Login" component={Login} />
-          <Route path="/Register" component={Register} />
-          <Route path="/Why_Us" component={WhyUs} />
-          <Route path="/What_we_do" component={Wedo} />
-          <Route path="/trust_safety" component={Trust} />
-          <Route path="/privacy_policy" component={Privacy} />
+          <Wrapper>
+            <Route exact path="/" component={Landingpages} />
+            <Route path="/About" component={About} />
+            <Route path="/Blog" component={Blog} />
+            <Route path="/Contact" component={Contact} />
+            <Route path="/Event" component={Event} />
+            <Route path="/Faq" component={Faq} />
+            <Route path="/How" component={How} />
+            <Route exact path="/Login" component={Login} />
+            <Route path="/Register" component={Register} />
+            <Route path="/Why_Us" component={WhyUs} />
+            <Route path="/What_we_do" component={Wedo} />
+            <Route path="/trust_safety" component={Trust} />
+            <Route path="/privacy_policy" component={Privacy} />
+          </Wrapper>
         </Switch>
       </BrowserRouter>
     );

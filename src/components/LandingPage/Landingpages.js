@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Layouts/Header/Header';
-import Footer from '../Layouts/Footer/Footer';
 import Banner from './Banner/Banner';
 import About from './About';
 import Options from './Option/Options';
@@ -12,8 +10,7 @@ import Blog from './Blog/Blog';
 class Landingpages extends Component {
     render() {
         return (
-            <>
-                <Header />
+            <div>
                 <Banner />
                 <About />
                 <Options />
@@ -21,8 +18,7 @@ class Landingpages extends Component {
                 <FunFact />
                 <Testimonials />
                 <Blog />
-                <Footer />
-            </>
+            </div>
         );
     }
 }

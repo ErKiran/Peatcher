@@ -26,11 +26,9 @@ class Main extends Component {
             password: this.state.password,
             name: this.state.username
         };
-        const values = this.props.registerUser(userData);
-        //console.log(values.hasOwnProperty('_id'))
-        if (values.hasOwnProperty('_id')) {
-            this.props.history.push('/login')
-        }
+        this.props.registerUser(userData)
+            .then(this.props.history.push('/login'));
+
     }
 
     onChange = (e) => {

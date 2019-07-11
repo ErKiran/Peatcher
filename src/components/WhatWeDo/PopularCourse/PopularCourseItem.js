@@ -10,7 +10,7 @@ class PopularCourseItem extends Component {
             <div className="row">
                 {
                     mock.map(i =>
-                        <div className="popular-courses-items">
+                        <div className="popular-courses-items" key={i.author_image}>
                             <div className="col-md-4 col-sm-6 equal-height">
                                 <div className="item">
                                     <Thumb image={i.course_image} price={i.price} />

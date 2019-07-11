@@ -6,11 +6,11 @@ import mock from './mock.json';
 class Blog extends Component {
     render() {
         return (
-            <div id="blog" class="blog-area default-padding bottom-less">
-                <div class="container">
+            <div id="blog" className="blog-area default-padding bottom-less">
+                <div className="container">
                     <BlogHeading />
-                    <div class="row">
-                        <div class="blog-items">
+                    <div className="row">
+                        <div className="blog-items">
                             {mock.map(i =>
                                 <BlogItem
                                     image={i.image}

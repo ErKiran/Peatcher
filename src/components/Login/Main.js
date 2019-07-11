@@ -42,7 +42,6 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="login-area default-padding">
                 <div className="container">
@@ -93,7 +92,7 @@ class Main extends Component {
                                     </button>
                                         </div>
                                     </div>
-                                    <p className="link-bottom">Not a member yet? <Link to="/signup">Register now</Link></p>
+                                    <p className="link-bottom">Not a member yet? <Link to="/register">Register now</Link></p>
                                 </div>
                             </form>
                         </div>
