@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { logoutUser } from '../../../actions/authAction';
 import NavInfo from './NavInfo';
+import { connect } from 'react-redux';
 
 class LoggedInHeader extends Component {
     render() {
+        const logOut = (e) => {
+            e.preventDefault();
+            this.props.logoutUser();
+        }
         return (
             <header id="home">
                 <nav className="navbar navbar-default navbar-sticky bootsnav">
@@ -32,16 +38,22 @@ class LoggedInHeader extends Component {
                             <ul>
                                 <li><a href="#">Profile</a></li>
                                 <li><a href="#">Edit Profile</a></li>
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="/" onClick={logOut}>Logout</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </nav>
-
             </header>
         );
     }
 }
 
-export default LoggedInHeader;
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+
+
+export default connect(mapStateToProps, { logoutUser })(
+    LoggedInHeader
+);

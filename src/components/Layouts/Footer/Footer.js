@@ -5,12 +5,10 @@ import FooterButton from './FooterButton';
 class Footer extends Component {
     render() {
         return (
-            <>
-                <footer className="bg-dark default-padding-top text-light">
-                    <FooterMain />
-                    <FooterButton />
-                </footer>
-            </>
+            <footer className="bg-dark default-padding-top text-light">
+                <FooterMain />
+                <FooterButton />
+            </footer>
         );
     }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class FooterMain extends Component {
     render() {
@@ -12,7 +13,7 @@ class FooterMain extends Component {
                                     <h3>PEATCHER</h3>
                                     <p className="text-italic" style={{ textAlign: 'justify' }}>
                                         Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address did showing because sitting replied six. Had arose guest visit going off child she new.
-                            </p>
+                                    </p>
                                     <div className="subscribe">
                                         <form action="#">
                                             <div className="input-group stylish-input-group">
@@ -30,10 +31,10 @@ class FooterMain extends Component {
                                     <h4>Quick Links</h4>
                                     <ul>
                                         <li>
-                                            <a href="#">Courses</a>
+                                            <Link to="/What_we_do">Courses</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Event</a>
+                                            <Link to="/event">Event</Link>
                                         </li>
                                         <li>
                                             <a href="#">Gallery</a>
@@ -43,7 +44,7 @@ class FooterMain extends Component {
                                             <a href="#">Teachers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Contact</a>
+                                            <Link to="/contact">Contact</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -56,14 +57,14 @@ class FooterMain extends Component {
                                             <a href="#">Donation</a>
                                         </li>
                                         <li>
-                                            <a href="#">Privacy Policy</a>
+                                            <Link to="/privacy_policy">Privacy Policy</Link>
                                         </li>
                                         <li>
                                             <a href="#">Advertising</a>
                                         </li>
 
                                         <li>
-                                            <a href="#">FAQ</a>
+                                            <Link to="/faq">FAQ</Link>
                                         </li>
                                         <li>
                                             <a href="#">Feedback</a>
@@ -84,7 +85,6 @@ class FooterMain extends Component {
                                             <p>Office <span>123 6th St. Spain.</span></p>
                                         </li>
                                     </ul>
-
                                 </div>
                             </div>
                         </div>

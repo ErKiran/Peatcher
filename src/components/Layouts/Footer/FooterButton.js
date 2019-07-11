@@ -9,7 +9,7 @@ class FooterButton extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="col-md-6">
-                                <p>&copy; Copyright 2019. All Rights Reserved by <Link to="/">PEATCHER</Link></p>
+                                <p>&copy; Copyright {new Date().getFullYear}. All Rights Reserved by <Link to="/">PEATCHER</Link></p>
                             </div>
                             <div className="col-md-6 text-right link">
                                 <ul>
