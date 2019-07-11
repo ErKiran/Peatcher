@@ -13,6 +13,7 @@ class Blog extends Component {
                         <div className="blog-items">
                             {mock.map(i =>
                                 <BlogItem
+                                    key={i.id}
                                     image={i.image}
                                     date={i.date}
                                     day={i.day}

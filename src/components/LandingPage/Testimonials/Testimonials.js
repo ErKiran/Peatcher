@@ -6,14 +6,15 @@ import mock from './mock.json'
 class Testimonials extends Component {
     render() {
         return (
-            <div class="testimonials-area carousel-shadow default-padding bg-dark text-light">
-                <div class="container">
+            <div className="testimonials-area carousel-shadow default-padding bg-dark text-light">
+                <div className="container">
                     <TestimonialsTitle />
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="clients-review-carousel owl-carousel owl-theme">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="clients-review-carousel owl-carousel owl-theme">
                                 {mock.map(i =>
                                     <TestimonialItem
+                                        key={i.id}
                                         image={i.image}
                                         desc={i.desc}
                                         name={i.name}

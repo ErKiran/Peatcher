@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NavHeader extends Component {
     render() {
@@ -7,9 +8,9 @@ class NavHeader extends Component {
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i className="fa fa-bars"></i>
                 </button>
-                <a className="navbar-brand" href="index.html">
+                <Link className="navbar-brand" to="/">
                     <img src="assets/img/logo.jpg" className="logo" alt="Logo" />
-                </a>
+                </Link>
             </div>
         );
     }

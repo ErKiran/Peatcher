@@ -8,18 +8,21 @@ class FunFactor extends Component {
                 <div className="container">
                     <div className="row">
                         <FunItem
+                            class="col-md-4 col-sm-6 item"
                             icon="flaticon-contract"
                             to="212"
                             speed="5000"
                             title="Awards Achieve"
                         />
                         <FunItem
+                            class="col-md-4 col-sm-6 item"
                             icon="flaticon-professor"
                             to="128"
                             speed="5000"
                             title="Satisfied Parents"
                         />
                         <FunItem
+                            class="col-md-4 col-sm-6 item"
                             icon="flaticon-online"
                             to="300"
                             speed="5000"

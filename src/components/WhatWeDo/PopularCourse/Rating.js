@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-const fullstar = () => (
-    <i className="fas fa-star"></i>
+const fullstar = (i) => (
+    <i className="fas fa-star" key={i}></i>
 );
 
-const halfstar = () => (
-    <i className="fas fa-star-half-alt"></i>
+const halfstar = (i) => (
+    <i className="fas fa-star-half-alt" key={i}></i>
 )
 
 class Rating extends Component {
@@ -15,10 +15,10 @@ class Rating extends Component {
         let full_stars = [];
         let half_stars = [];
         for (let i = 0; i < full; i++) {
-            full_stars.push(fullstar())
+            full_stars.push(fullstar(i))
         }
         if (half <= 0.5) {
-            half_stars.push(halfstar())
+            half_stars.push(halfstar(half))
         }
         else {
             full_stars.push(fullstar())

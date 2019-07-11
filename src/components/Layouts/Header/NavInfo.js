@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Dropdown from './Dropdown';
 class NavInfo extends Component {
     render() {
         return (
@@ -8,57 +9,61 @@ class NavInfo extends Component {
                     <li >
                         <Link to="/" className="active" >Home</Link>
                     </li>
-                    <li className="dropdown">
-                        <Link to="/about" className="dropdown-toggle active" data-toggle="dropdown" >About Us</Link>
-                        <ul className="dropdown-menu">
-                            <li><Link to="/About">Who are We?</Link></li>
-                            <li><Link to="/Contact">Get in Touch With Us</Link></li>
-                            <li><Link to="/Blog">Blog</Link></li>
-                        </ul>
-                    </li>
-                    <li className="dropdown">
-                        <Link to="/What_we_do" className="dropdown-toggle active" data-toggle="dropdown" >Our Concept</Link>
-                        <ul className="dropdown-menu">
-                            <li><Link to="/What_we_do">What do we do?</Link></li>
-                            <li><Link to="/Why_us">Why Us</Link></li>
-                            <li><a href="#">How does it works?</a></li>
-                        </ul>
-                    </li>
-
-                    <li className="dropdown">
-                        <Link to="/trust_safety" className="dropdown-toggle active" data-toggle="dropdown" >Security</Link>
-                        <ul className="dropdown-menu">
-                            <li><Link to="/trust_safety">Trust & Safety</Link></li>
-                            <li><Link to="/privacy_policy">Privacy Policy</Link></li>
-                            <li><Link to="/faq">FAQ</Link></li>
-
-                        </ul>
-                    </li>
-
-                    <li className="dropdown">
-                        <Link to="/event" className="dropdown-toggle active" data-toggle="dropdown" >Partnet with us</Link>
-                        <ul className="dropdown-menu">
-                            <li><a href="#">Affiliation</a></li>
-                            <li><a href="#">Advertising</a></li>
-                            <li><Link to="/event">Events/Donation</Link></li>
-
-                        </ul>
-                    </li>
+                    <Dropdown
+                        mainLink="/about"
+                        title="About Us"
+                        l1="Who are We?"
+                        l2="Get in Touch With Us"
+                        l3="Blog"
+                        l1link="/About"
+                        l2link="/Contact"
+                        l3link="/Blog"
+                    />
+                    <Dropdown
+                        mainLink="/What_we_do"
+                        title="Our Concept"
+                        l1="What do we do?"
+                        l2="Why Us"
+                        l3="How does it works?"
+                        l1link="/What_we_do"
+                        l2link="/Why_us"
+                        l3link=""
+                    />
+                    <Dropdown
+                        mainLink="/trust_safety"
+                        title="Security"
+                        l1="Trust & Safety"
+                        l2="Privacy Policy"
+                        l3="FAQ"
+                        l1link="/trust_safety"
+                        l2link="/privacy_policy"
+                        l3link="/faq"
+                    />
+                    <Dropdown
+                        mainLink="/event"
+                        title="Partner with us"
+                        l1="Affiliation"
+                        l2="Advertising"
+                        l3="Events/Donation"
+                        l1link=""
+                        l2link=""
+                        l3link="/event"
+                    />
                     <li>
-                        <Link to="/register">Sign Up</Link>
+                        {this.props.children}
                     </li>
-                    <li className="dropdown">
-                        <Link to="/About" className="dropdown-toggle active" data-toggle="dropdown" >Languages</Link>
-                        <ul className="dropdown-menu">
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Arabic</a></li>
-                            <li><a href="#">French</a></li>
-
-                        </ul>
-                    </li>
+                    <Dropdown
+                        mainLink="/About"
+                        title="Languages"
+                        l1="English"
+                        l2="Arabic"
+                        l3="French"
+                        l1link=""
+                        l2link=""
+                        l3link=""
+                    />
                 </ul>
             </div>
-
         );
     }
 }

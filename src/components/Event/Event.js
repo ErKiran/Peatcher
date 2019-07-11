@@ -7,10 +7,10 @@ class Event extends Component {
         return (
             <div>
                 <Breadcrumb h1="Event" li1="Home" li2="Partner With Us" li3="Event" background="url(assets/img/banner/4.jpg)" />
-                <section id="event" class="event-area default-padding">
-                    <div class="container">
-                        <div class="row">
-                            <div class="event-items">
+                <section id="event" className="event-area default-padding">
+                    <div className="container">
+                        <div className="row">
+                            <div className="event-items">
                                 <SingleItems />
                             </div>
                         </div>

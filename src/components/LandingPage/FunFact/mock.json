@@ -1,23 +1,27 @@
 [
     {
+        "class": "col-md-3 col-sm-6 item",
         "icon": "flaticon-contract",
         "to": "212",
         "speed": "2000",
         "title": "Awards Achieve"
     },
     {
+        "class": "col-md-3 col-sm-6 item",
         "icon": "flaticon-professor",
         "to": "1000",
         "speed": "2000",
         "title": "Satisfied Parents"
     },
     {
+        "class": "col-md-3 col-sm-6 item",
         "icon": "flaticon-online",
         "to": "8970",
         "speed": "2000",
         "title": "Student Enrolled"
     },
     {
+        "class": "col-md-3 col-sm-6 item",
         "icon": "flaticon-reading",
         "to": "640",
         "speed": "2000",
