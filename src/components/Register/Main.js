@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import classnames from 'classnames';
 import { registerUser } from '../../actions/authAction';
 import RegisterSocial from '../Layouts/RegisterSocial';
 
@@ -36,6 +37,7 @@ class Main extends Component {
     }
 
     render() {
+        const { errors } = this.state;
         return (
             <div className="login-area default-padding">
                 <div className="container">
@@ -49,7 +51,9 @@ class Main extends Component {
                                         <div className="row">
                                             <div className="form-group">
                                                 <input
-                                                    className="form-control"
+                                                    className={classnames('form-control', {
+                                                        'is-invalid': errors.email
+                                                    })}
                                                     placeholder="Email*"
                                                     type="email"
                                                     name="email"

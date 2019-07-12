@@ -2,11 +2,19 @@ import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
-import { SET_CURRENT_USER } from './types';
+import { SET_CURRENT_USER, GET_ERRORS } from './types';
 
 // Register User
 export const registerUser = (userData, history) => async dispatch => {
-    await axios.post('https://calm-eyrie-44469.herokuapp.com/register', userData);
+    try {
+        await axios.post('https://calm-eyrie-44469.herokuapp.com/register', userData);
+    }
+    catch (err) {
+        dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+        })
+    }
 };
 
 export const loginUser = userData => async dispatch => {
@@ -19,11 +27,12 @@ export const loginUser = userData => async dispatch => {
         const decoded = jwt_decode(token);
         dispatch(setCurrentUser(decoded));
     }
-    catch (e) {
-        console.log(e);
+    catch (err) {
+        dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+        })
     }
-
-
 };
 
 // Set logged in user
