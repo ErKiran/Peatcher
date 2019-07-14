@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import classnames from 'classnames';
 import { registerUser } from '../../actions/authAction';
 import RegisterSocial from '../Layouts/RegisterSocial';
+import TextFieldGroup from '../Common/TextFieldGroup';
 
 
 class Main extends Component {
@@ -18,20 +18,21 @@ class Main extends Component {
             errors: {}
         };
     }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
+        }
+    }
 
-    onSubmit = (e) => {
+    onSubmit = async (e) => {
         e.preventDefault();
-
         const userData = {
             email: this.state.email,
             password: this.state.password,
             name: this.state.username
         };
-        this.props.registerUser(userData)
-            .then(this.props.history.push('/login'));
-
+        this.props.registerUser(userData, this.props.history);
     }
-
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
     }
@@ -49,60 +50,50 @@ class Main extends Component {
                                     <h4>Register a new account</h4>
                                     <div className="col-md-12">
                                         <div className="row">
-                                            <div className="form-group">
-                                                <input
-                                                    className={classnames('form-control', {
-                                                        'is-invalid': errors.email
-                                                    })}
-                                                    placeholder="Email*"
-                                                    type="email"
-                                                    name="email"
-                                                    value={this.state.email}
-                                                    onChange={this.onChange}
-                                                />
-                                            </div>
+                                            <TextFieldGroup
+                                                placeholder="Email"
+                                                name="email"
+                                                type="email"
+                                                value={this.state.email}
+                                                onChange={this.onChange}
+                                                error={errors.email}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-md-12">
                                         <div className="row">
-                                            <div className="form-group">
-                                                <input
-                                                    className="form-control"
-                                                    placeholder="Username*"
-                                                    type="text"
-                                                    name="username"
-                                                    value={this.state.username}
-                                                    onChange={this.onChange}
-                                                />
-                                            </div>
+                                            <TextFieldGroup
+                                                placeholder="Username*"
+                                                name="username"
+                                                type="text"
+                                                value={this.state.username}
+                                                onChange={this.onChange}
+                                                error={errors.name}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-md-12">
                                         <div className="row">
-                                            <div className="form-group">
-                                                <input
-                                                    className="form-control"
-                                                    placeholder="Password*"
-                                                    type="text"
-                                                    name="password"
-                                                    value={this.state.password}
-                                                    onChange={this.onChange}
-                                                />
-                                            </div>
+                                            <TextFieldGroup
+                                                placeholder="Password*"
+                                                name="password"
+                                                type="password"
+                                                value={this.state.password}
+                                                onChange={this.onChange}
+                                                error={errors.password}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-md-12">
                                         <div className="row">
-                                            <div className="form-group">
-                                                <input
-                                                    className="form-control"
-                                                    placeholder="Repeat Password*"
-                                                    type="text"
-                                                    name="password2"
-                                                    value={this.state.password2}
-                                                    onChange={this.onChange}
-                                                />
-                                            </div>
+                                            <TextFieldGroup
+                                                placeholder="Repeat Password*"
+                                                name="password2"
+                                                type="password"
+                                                value={this.state.password2}
+                                                onChange={this.onChange}
+                                                error={errors.password2}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-md-12">

@@ -2,12 +2,17 @@ import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
+import { BASE_URL } from './api';
+
 import { SET_CURRENT_USER, GET_ERRORS } from './types';
 
 // Register User
 export const registerUser = (userData, history) => async dispatch => {
     try {
-        await axios.post('https://calm-eyrie-44469.herokuapp.com/register', userData);
+        const res = await axios.post(`${BASE_URL}/register`, userData);
+        if (res.data) {
+            history.push('/login')
+        }
     }
     catch (err) {
         dispatch({
@@ -19,7 +24,7 @@ export const registerUser = (userData, history) => async dispatch => {
 
 export const loginUser = userData => async dispatch => {
     try {
-        const res = await axios.post('https://calm-eyrie-44469.herokuapp.com/login', userData);
+        const res = await axios.post(`${BASE_URL}/login`, userData);
         const { token } = res.data;
         console.log(token)
         localStorage.setItem('jwtToken', token);
