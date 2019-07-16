@@ -1,4 +1,6 @@
-import { SEND_CONTACT_MESSAGE } from '../actions/types';
+import {
+    CREATE_USER_PROFILE
+} from '../actions/types';
 
 const initialState = {
     msg: {}
@@ -6,7 +8,8 @@ const initialState = {
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case SEND_CONTACT_MESSAGE:
+        case
+            CREATE_USER_PROFILE:
             return {
                 ...state,
                 msg: action.payload

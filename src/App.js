@@ -21,6 +21,8 @@ import Wedo from './components/WhatWeDo/Wedo';
 import Trust from './components/Trust/Trust';
 import Privacy from './components/Privacy/Privacy';
 import Wrapper from './components/Layouts/Wrapper';
+import PrivateRoute from './components/Common/PrivateRoute';
+import Profile from './components/UserProfile/Profile';
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
@@ -51,6 +53,7 @@ class App extends Component {
             <Route path="/Why_Us" component={WhyUs} />
             <Route path="/What_we_do" component={Wedo} />
             <Route path="/trust_safety" component={Trust} />
+            <PrivateRoute path="/user_profile" component={Profile} />
             <Route path="/privacy_policy" component={Privacy} />
           </Wrapper>
         </Switch>

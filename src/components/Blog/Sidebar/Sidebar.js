@@ -10,7 +10,7 @@ import Tags from './Tags';
 class Sidebar extends Component {
     render() {
         return (
-            <div class="sidebar col-md-4">
+            <div className="sidebar col-md-4">
                 <aside>
                     <Search />
                     <Category />
