@@ -29,7 +29,8 @@ class Main extends Component {
         const userData = {
             email: this.state.email,
             password: this.state.password,
-            name: this.state.username
+            name: this.state.username,
+            password2: this.state.password2
         };
         this.props.registerUser(userData, this.props.history);
     }
@@ -48,68 +49,48 @@ class Main extends Component {
                                 <RegisterSocial />
                                 <div className="col-md-8 login-custom">
                                     <h4>Register a new account</h4>
-                                    <div className="col-md-12">
-                                        <div className="row">
-                                            <TextFieldGroup
-                                                placeholder="Email"
-                                                name="email"
-                                                type="email"
-                                                value={this.state.email}
-                                                onChange={this.onChange}
-                                                error={errors.email}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="row">
-                                            <TextFieldGroup
-                                                placeholder="Username*"
-                                                name="username"
-                                                type="text"
-                                                value={this.state.username}
-                                                onChange={this.onChange}
-                                                error={errors.name}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="row">
-                                            <TextFieldGroup
-                                                placeholder="Password*"
-                                                name="password"
-                                                type="password"
-                                                value={this.state.password}
-                                                onChange={this.onChange}
-                                                error={errors.password}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="row">
-                                            <TextFieldGroup
-                                                placeholder="Repeat Password*"
-                                                name="password2"
-                                                type="password"
-                                                value={this.state.password2}
-                                                onChange={this.onChange}
-                                                error={errors.password2}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="row">
-                                            <button type="submit">
-                                                Sign up
+                                    <TextFieldGroup
+                                        placeholder="Email"
+                                        name="email"
+                                        type="email"
+                                        value={this.state.email}
+                                        onChange={this.onChange}
+                                        error={errors.email}
+                                    />
+                                    <TextFieldGroup
+                                        placeholder="Username*"
+                                        name="username"
+                                        type="text"
+                                        value={this.state.username}
+                                        onChange={this.onChange}
+                                        error={errors.name}
+                                    />
+                                    <TextFieldGroup
+                                        placeholder="Password*"
+                                        name="password"
+                                        type="password"
+                                        value={this.state.password}
+                                        onChange={this.onChange}
+                                        error={errors.password}
+                                    />
+                                    <TextFieldGroup
+                                        placeholder="Repeat Password*"
+                                        name="password2"
+                                        type="password"
+                                        value={this.state.password2}
+                                        onChange={this.onChange}
+                                        error={errors.password2}
+                                    />
+                                    <button type="submit">
+                                        Sign up
                                         </button>
-                                        </div>
-                                    </div>
                                     <p className="link-bottom">Are you a member? <Link to="/login">Login now</Link></p>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         );
     }
 }
